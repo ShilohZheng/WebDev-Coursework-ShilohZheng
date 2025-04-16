@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Adventure in Coding</title>
+    </head>
+    <body>
+        <h1>Welcome to My Coding Journey</h1>
+        <p>Today I'm learning HTML and building my first webpage!</p>
+        
+        <h2>Why I'm Learning to Code</h2>
+        <p>I want to create websites, apps, and maybe even games someday.</p>
+        
+        <h3>What I've Learned So Far</h3>
+        <p>HTML stands for HyperText Markup Language. It's the structure of web pages.</p>
+        
+        <h2>My Goals</h2>
+        <p>1. Build a personal website</p>
+        <p>2. Create a blog</p>
+        <p>3. Make a simple game</p>
+        
+        <h4>Small But Important Note:</h4>
+        <p>Every expert was once a beginner. This is my start!</p>
+    </body>
+</html>
