@@ -13,17 +13,17 @@
 
 ## Table of Contents
 
-1. [Unit 1 - The Web and Web Development](#unit-1---the-web-and-web-development)
-2. [Unit 2 - Design and Design Thinking](#unit-2---design-and-design-thinking)
-3. [Unit 3 - Client Project](#unit-3---client-project)
-4. [Unit 4 - Styling with HTML](#unit-4---styling-with-html)
-5. [Unit 5 - Introduction to CSS](#unit-5---introduction-to-css)
-6. [Unit 6 - Feedback and Iteration (Client)](#unit-6---feedback-and-iteration-client)
-7. [Unit 7 - Solve a Problem, Serve a Purpose](#unit-7---solve-a-problem-serve-a-purpose)
-8. [Unit 8 - Advanced CSS and Responsive Web Design](#unit-8---advanced-css-and-responsive-web-design)
-9. [Unit 9 - Introduction to JavaScript](#unit-9---introduction-to-javascript)
-10. [Unit 10 - Feedback and Iteration (Community Client)](#unit-10---feedback-and-iteration-community-client)
-11. [Unit 11 - Recap, Reflect, and Next Steps](#unit-11---recap-reflect-and-next-steps)
+1. [Unit 1 - The Web and Web Development](./Unit1)
+2. [Unit 2 - Design and Design Thinking](./Unit2)
+3. [Unit 3 - Client Project](./Unit3)
+4. [Unit 4 - Styling with HTML](./Unit4)
+5. [Unit 5 - Introduction to CSS](./Unit5)
+6. [Unit 6 - Feedback and Iteration (Client)](./Unit6)
+7. [Unit 7 - Solve a Problem, Serve a Purpose](./Unit7)
+8. [Unit 8 - Advanced CSS and Responsive Web Design](./Unit8)
+9. [Unit 9 - Introduction to JavaScript](./Unit9)
+10. [Unit 10 - Feedback and Iteration (Community Client)](./Unit10)
+11. [Unit 11 - Recap, Reflect, and Next Steps](./Unit11)
 
 ---
 
