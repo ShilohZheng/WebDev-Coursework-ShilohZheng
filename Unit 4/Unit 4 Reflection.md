@@ -1,4 +1,4 @@
-## My Thoughts on Unit 4 - Styling with HTML  
+# My Thoughts on Unit 4 - Styling with HTML  
 
 In this unit, I learned how to make websites better using HTML. I now know how to add titles and language tags to webpages. I practiced making different kinds of lists - numbered lists, bullet points, and even lists inside lists. The part about adding pictures was cool too - I learned the difference between linking to online images and using pictures from my computer. The most important lesson was about making websites accessible for everyone, like adding descriptions for images so blind people can understand them.  
 
