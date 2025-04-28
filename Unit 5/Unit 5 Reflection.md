@@ -1,1 +1,7 @@
+# Unit 5 Reflection: Introduction to CSS
 
+In this unit, I learned the fundamentals of CSS, including its purpose and how it enhances web design by styling HTML elements. Key concepts included applying CSS through inline, internal, and external methods, as well as basic properties like `color`, `font-size`, and `font-family`. The code challenges, such as sizing an image and adding internal styles, helped me practice these skills. I also discovered the importance of the "cascading" nature of CSS, which determines how styles are prioritized when conflicts arise.
+
+One challenge I faced was remembering the syntax for different CSS properties, especially when switching between inline and external styles. Another difficulty was understanding how external CSS files link to HTML documents. To overcome these challenges, I revisited the lesson summaries, experimented with small code snippets, and used online resources like W3Schools for clarification. Breaking down problems into smaller steps, such as styling one element at a time, made the process less overwhelming.
+
+This unit connects to the broader web development process by showing how CSS transforms plain HTML into visually appealing websites. Understanding styling is crucial because it directly impacts user experience and design consistency. As I move forward, these skills will help me create more polished and professional projects, combining structure (HTML) and presentation (CSS) effectively.
