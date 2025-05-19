@@ -1,0 +1,64 @@
+body {
+    font-family: Arial;
+    color: black;
+    font-size: 16px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+/* Heading styles */
+h1 {
+    color: red;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: blue;
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+h3 {
+    color: green;
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+/* Text emphasis */
+strong {
+    color: orange;
+}
+
+/* Image styling */
+.profile-img {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Link styling */
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* List styling */
+ul {
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
