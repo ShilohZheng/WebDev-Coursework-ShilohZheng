@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Connect - Enhanced</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with flex display -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Neighborhood Connect <span class="badge">New</span></h1>
+                <p>Bringing our community together</p>
+            </div>
+            <div class="weather-widget">
+                <span class="weather-text">72°F Sunny</span>
+                <span class="weather-icon"></span>
+            </div>
+        </header>
+        
+        <!-- Sticky Navigation -->
+        <div class="sticky-nav">
+            <nav class="nav-bar">
+                <a href="#" class="nav-link">
+                    <span class="inline-icon">🏠</span>Home
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="inline-icon">📅</span>Events
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="inline-icon">📰</span>News
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="inline-icon">✉️</span>Contact
+                </a>
+                <a href="#" class="nav-link mobile-only" id="login-mobile">
+                    <span class="inline-icon">🔒</span>Login
+                </a>
+            </nav>
+        </div>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>Upcoming Events</h2>
+            
+            <div class="card-container">
+                <div class="card-group">
+                    <div class="card">
+                        <div class="corner-ribbon">Popular!</div>
+                        <h3>Community Clean-Up Day</h3>
+                        <p><strong>Date:</strong> June 15, 2024</p>
+                        <p><strong>Location:</strong> Main Park</p>
+                        <p>Join us to keep our neighborhood beautiful!</p>
+                        <div class="card-footer">
+                            <button class="rsvp-btn">RSVP</button>
+                            <button class="details-btn">More Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Summer Block Party</h3>
+                        <p><strong>Date:</strong> July 20, 2024</p>
+                        <p><strong>Location:</strong> Oak Street</p>
+                        <p>Food, music, and fun for all ages!</p>
+                        <div class="card-footer">
+                            <button class="rsvp-btn">RSVP</button>
+                            <button class="details-btn">More Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-group">
+                    <div class="card">
+                        <h3>Neighborhood Meeting</h3>
+                        <p><strong>Date:</strong> August 5, 2024</p>
+                        <p><strong>Location:</strong> Community Center</p>
+                        <p>Discuss local issues and improvements</p>
+                        <div class="card-footer">
+                            <button class="rsvp-btn">RSVP</button>
+                            <button class="details-btn">More Details</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Local Business Fair</h3>
+                        <p><strong>Date:</strong> September 12, 2024</p>
+                        <p><strong>Location:</strong> Town Square</p>
+                        <p>Support our local entrepreneurs</p>
+                        <div class="card-footer">
+                            <button class="rsvp-btn">RSVP</button>
+                            <button class="details-btn">More Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Monthly Highlights</h3>
+                <div class="highlights-container">
+                    <div class="highlight-item">
+                        <h4><span class="icon">👐</span> Volunteer Opportunities</h4>
+                        <p>Check our bulletin for weekly volunteer needs</p>
+                        <div class="highlight-cta">
+                            <span class="icon">📌</span> Sign up today!
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <h4><span class="icon">🏢</span> Local Business Spotlight</h4>
+                        <p>Featured business of the month</p>
+                        <div class="highlight-cta">
+                            <span class="icon">🌟</span> Meet our sponsors
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Newsletter Signup Modal (hidden by default) -->
+            <div class="modal" id="newsletter-modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="submit-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer with grid display -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="copyright">© <span id="current-year">2024</span> Neighborhood Connect</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <button class="newsletter-btn">Subscribe to Newsletter</button>
+            </div>
+        </footer>
+        
+        <!-- Floating action button -->
+        <button class="floating-action">+</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
