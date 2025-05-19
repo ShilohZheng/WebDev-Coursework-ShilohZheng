@@ -4,151 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neighborhood Connect - Adaptive</title>
-    <style>
-        /* Base Styles for all devices */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .container {
-            margin: 0 auto;
-        }
-        
-        .header {
-            background: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        
-        .nav-bar {
-            background: #f2f2f2;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        
-        .nav-link {
-            text-decoration: none;
-            color: #333;
-            padding: 5px 10px;
-            border-radius: 3px;
-        }
-        
-        .nav-link:hover {
-            background: #4CAF50;
-            color: white;
-        }
-        
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-        }
-        
-        /* Mobile First - Default styles for smallest screens */
-        .container {
-            width: 100%;
-            padding: 10px;
-        }
-        
-        .nav-bar {
-            display: block;
-            text-align: center;
-        }
-        
-        .nav-link {
-            display: block;
-            margin: 5px 0;
-        }
-        
-        /* Tablet Breakpoint (768px) */
-        @media (min-width: 768px) {
-            .container {
-                width: 750px;
-                padding: 15px;
-            }
-            
-            .nav-bar {
-                display: flex;
-                justify-content: space-around;
-            }
-            
-            .nav-link {
-                display: inline-block;
-            }
-            
-            .card-container {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
-        
-        /* Desktop Breakpoint (992px) */
-        @media (min-width: 992px) {
-            .container {
-                width: 970px;
-            }
-            
-            .card-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                text-align: left;
-            }
-            
-            .header h1 {
-                margin: 0;
-            }
-            
-            .header p {
-                margin: 0;
-            }
-        }
-        
-        /* Large Desktop Breakpoint (1200px) */
-        @media (min-width: 1200px) {
-            .container {
-                width: 1170px;
-            }
-            
-            .card-container {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .nav-bar {
-                padding: 20px;
-            }
-            
-            .nav-link {
-                padding: 10px 20px;
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -202,12 +58,12 @@
             
             <div class="card">
                 <h3>Monthly Highlights</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                    <div style="flex: 1; min-width: 200px;">
+                <div class="highlights-container">
+                    <div class="highlight-item">
                         <h4>Volunteer Opportunities</h4>
                         <p>Check our bulletin for weekly volunteer needs</p>
                     </div>
-                    <div style="flex: 1; min-width: 200px;">
+                    <div class="highlight-item">
                         <h4>Local Business Spotlight</h4>
                         <p>Featured business of the month</p>
                     </div>
@@ -217,8 +73,10 @@
         
         <!-- Footer -->
         <footer class="footer">
-            <p>© 2024 Neighborhood Connect</p>
+            <p>© <span id="current-year">2024</span> Neighborhood Connect</p>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
