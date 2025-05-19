@@ -1,0 +1,340 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    margin: 0 auto;
+    display: flow-root;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    text-align: center;
+}
+
+.weather-widget {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.weather-text {
+    margin-right: 10px;
+}
+
+.weather-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #FFD700;
+    border-radius: 50%;
+}
+
+/* Navigation */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-bar {
+    background: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    background: #4CAF50;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Main Content */
+.main-content {
+    padding: 15px 0;
+}
+
+/* Card Styles */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.corner-ribbon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    background: #FF5722;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(45deg) translate(30%, -50%);
+    transform-origin: 100% 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rsvp-btn {
+    padding: 8px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rsvp-btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Highlights Section */
+.highlights-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-item {
+    flex: 1;
+    min-width: 250px;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.highlight-cta {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+/* Pricing Table */
+.pricing-table-container {
+    display: none;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.pricing-row {
+    display: table-row;
+}
+
+.pricing-cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.footer-links {
+    display: inline-flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4CAF50;
+}
+
+/* Floating Action Button */
+.floating-action {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #4CAF50;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 99;
+}
+
+.floating-action:hover {
+    transform: scale(1.1);
+}
+
+/* Badge */
+.badge {
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    background: #FF5722;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        padding: 15px;
+    }
+    
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .header-content {
+        text-align: left;
+    }
+    
+    .weather-widget {
+        margin-top: 0;
+    }
+    
+    .nav-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pricing-table-container {
+        display: block;
+    }
+    
+    .mobile-only {
+        display: inline-flex;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+    
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+    
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .nav-bar {
+        padding: 20px;
+    }
+    
+    .nav-link {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+}
