@@ -4,286 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neighborhood Connect - Enhanced</title>
-    <style>
-        /* Base Styles for all devices */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        
-        /* Using display: flow-root for better container behavior */
-        .container {
-            margin: 0 auto;
-            display: flow-root; /* Creates a new block formatting context */
-        }
-        
-        /* Header with flex display */
-        .header {
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            color: white;
-            padding: 20px;
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        /* Navigation with inline-flex for better control */
-        .nav-bar {
-            background: #f2f2f2;
-            padding: 15px;
-            margin-bottom: 20px;
-            display: inline-flex;
-            width: 100%;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            border-radius: 5px;
-        }
-        
-        .nav-link {
-            text-decoration: none;
-            color: #333;
-            padding: 8px 15px;
-            border-radius: 3px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-        }
-        
-        .nav-link:hover {
-            background: #4CAF50;
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        /* Card with display: flex and column direction */
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        /* Footer with grid display */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-            margin-top: 30px;
-        }
-        
-        /* Utility classes using display properties */
-        .hidden {
-            display: none !important;
-        }
-        
-        .inline-icon {
-            display: inline;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-        
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            display: block;
-        }
-        
-        /* Monthly highlights with inline-block elements */
-        .highlight-item {
-            display: inline-block;
-            vertical-align: top;
-            width: 100%;
-        }
-        
-        /* Mobile First - Default styles for smallest screens */
-        .container {
-            width: 100%;
-            padding: 10px;
-        }
-        
-        .nav-bar {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        
-        .card-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-        
-        /* Tablet Breakpoint (768px) */
-        @media (min-width: 768px) {
-            .container {
-                width: 750px;
-                padding: 15px;
-            }
-            
-            .nav-bar {
-                flex-direction: row;
-                align-items: center;
-            }
-            
-            .card-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .highlight-item {
-                width: calc(50% - 10px);
-                margin-right: 10px;
-            }
-            
-            .highlight-item:last-child {
-                margin-right: 0;
-            }
-            
-            /* Using display: table for pricing section */
-            .pricing-table {
-                display: table;
-                width: 100%;
-                border-collapse: collapse;
-            }
-            
-            .pricing-row {
-                display: table-row;
-            }
-            
-            .pricing-cell {
-                display: table-cell;
-                padding: 10px;
-                border: 1px solid #ddd;
-                vertical-align: middle;
-            }
-        }
-        
-        /* Desktop Breakpoint (992px) */
-        @media (min-width: 992px) {
-            .container {
-                width: 970px;
-            }
-            
-            .header {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                text-align: left;
-            }
-            
-            .card-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            /* Using display: inline-grid for special elements */
-            .badge {
-                display: inline-grid;
-                place-items: center;
-                width: 24px;
-                height: 24px;
-                background: #FF5722;
-                color: white;
-                border-radius: 50%;
-                font-size: 12px;
-                margin-left: 5px;
-            }
-        }
-        
-        /* Large Desktop Breakpoint (1200px) */
-        @media (min-width: 1200px) {
-            .container {
-                width: 1170px;
-            }
-            
-            .card-container {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .nav-bar {
-                padding: 20px;
-            }
-            
-            .nav-link {
-                padding: 10px 20px;
-                font-size: 1.1rem;
-            }
-            
-            /* Using display: contents for semantic grouping */
-            .card-group {
-                display: contents;
-            }
-        }
-        
-        /* Special elements with different display values */
-        .corner-ribbon {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 150px;
-            background: #FF5722;
-            color: white;
-            text-align: center;
-            line-height: 30px;
-            transform: rotate(45deg) translate(30%, -50%);
-            transform-origin: 100% 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        
-        .floating-action {
-            display: inline-block;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #4CAF50;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 60px;
-            font-size: 24px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <!-- Header with flex display -->
         <header class="header">
-            <div>
+            <div class="header-content">
                 <h1>Neighborhood Connect <span class="badge">New</span></h1>
                 <p>Bringing our community together</p>
             </div>
-            <div class="weather-widget" style="display: inline-flex; align-items: center;">
-                <span style="margin-right: 10px;">72°F Sunny</span>
-                <span style="display: inline-block; width: 30px; height: 30px; background: #FFD700; border-radius: 50%;"></span>
+            <div class="weather-widget">
+                <span class="weather-text">72°F Sunny</span>
+                <span class="weather-icon"></span>
             </div>
         </header>
         
@@ -302,7 +35,7 @@
                 <a href="#" class="nav-link">
                     <span class="inline-icon">✉️</span>Contact
                 </a>
-                <a href="#" class="nav-link" style="display: none;" id="login-mobile">
+                <a href="#" class="nav-link mobile-only" id="login-mobile">
                     <span class="inline-icon">🔒</span>Login
                 </a>
             </nav>
@@ -320,8 +53,8 @@
                         <p><strong>Date:</strong> June 15, 2024</p>
                         <p><strong>Location:</strong> Main Park</p>
                         <p>Join us to keep our neighborhood beautiful!</p>
-                        <div style="margin-top: auto; display: flex; justify-content: flex-end;">
-                            <button style="padding: 8px 15px; background: #4CAF50; color: white; border: none; border-radius: 3px;">RSVP</button>
+                        <div class="card-footer">
+                            <button class="rsvp-btn">RSVP</button>
                         </div>
                     </div>
                     
@@ -330,8 +63,8 @@
                         <p><strong>Date:</strong> July 20, 2024</p>
                         <p><strong>Location:</strong> Oak Street</p>
                         <p>Food, music, and fun for all ages!</p>
-                        <div style="margin-top: auto; display: flex; justify-content: flex-end;">
-                            <button style="padding: 8px 15px; background: #4CAF50; color: white; border: none; border-radius: 3px;">RSVP</button>
+                        <div class="card-footer">
+                            <button class="rsvp-btn">RSVP</button>
                         </div>
                     </div>
                 </div>
@@ -342,8 +75,8 @@
                         <p><strong>Date:</strong> August 5, 2024</p>
                         <p><strong>Location:</strong> Community Center</p>
                         <p>Discuss local issues and improvements</p>
-                        <div style="margin-top: auto; display: flex; justify-content: flex-end;">
-                            <button style="padding: 8px 15px; background: #4CAF50; color: white; border: none; border-radius: 3px;">RSVP</button>
+                        <div class="card-footer">
+                            <button class="rsvp-btn">RSVP</button>
                         </div>
                     </div>
                     
@@ -352,8 +85,8 @@
                         <p><strong>Date:</strong> September 12, 2024</p>
                         <p><strong>Location:</strong> Town Square</p>
                         <p>Support our local entrepreneurs</p>
-                        <div style="margin-top: auto; display: flex; justify-content: flex-end;">
-                            <button style="padding: 8px 15px; background: #4CAF50; color: white; border: none; border-radius: 3px;">RSVP</button>
+                        <div class="card-footer">
+                            <button class="rsvp-btn">RSVP</button>
                         </div>
                     </div>
                 </div>
@@ -361,34 +94,26 @@
             
             <div class="card">
                 <h3>Monthly Highlights</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div class="highlights-container">
                     <div class="highlight-item">
-                        <h4 style="display: flex; align-items: center;">
-                            <span style="margin-right: 10px;">👐</span> Volunteer Opportunities
-                        </h4>
+                        <h4><span class="icon">👐</span> Volunteer Opportunities</h4>
                         <p>Check our bulletin for weekly volunteer needs</p>
-                        <div style="display: inline-block; background: #f0f0f0; padding: 5px 10px; border-radius: 3px; margin-top: 5px;">
-                            <span style="display: inline-flex; align-items: center;">
-                                <span style="margin-right: 5px;">📌</span> Sign up today!
-                            </span>
+                        <div class="highlight-cta">
+                            <span class="icon">📌</span> Sign up today!
                         </div>
                     </div>
                     <div class="highlight-item">
-                        <h4 style="display: flex; align-items: center;">
-                            <span style="margin-right: 10px;">🏢</span> Local Business Spotlight
-                        </h4>
+                        <h4><span class="icon">🏢</span> Local Business Spotlight</h4>
                         <p>Featured business of the month</p>
-                        <div style="display: inline-block; background: #f0f0f0; padding: 5px 10px; border-radius: 3px; margin-top: 5px;">
-                            <span style="display: inline-flex; align-items: center;">
-                                <span style="margin-right: 5px;">🌟</span> Meet our sponsors
-                            </span>
+                        <div class="highlight-cta">
+                            <span class="icon">🌟</span> Meet our sponsors
                         </div>
                     </div>
                 </div>
             </div>
             
             <!-- Pricing table shown only on tablets and up -->
-            <div class="card hidden-mobile" style="display: none;">
+            <div class="card pricing-table-container">
                 <h3>Membership Options</h3>
                 <div class="pricing-table">
                     <div class="pricing-row">
@@ -412,18 +137,20 @@
         
         <!-- Footer with grid display -->
         <footer class="footer">
-            <div>
-                <p>© 2024 Neighborhood Connect</p>
-                <div style="display: inline-flex; gap: 15px; margin-top: 10px;">
-                    <a href="#" style="color: white; text-decoration: none;">Privacy Policy</a>
-                    <a href="#" style="color: white; text-decoration: none;">Terms of Service</a>
-                    <a href="#" style="color: white; text-decoration: none;">Contact Us</a>
+            <div class="footer-content">
+                <p class="copyright">© 2024 Neighborhood Connect</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
                 </div>
             </div>
         </footer>
         
         <!-- Floating action button -->
-        <div class="floating-action">+</div>
+        <button class="floating-action">+</button>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
