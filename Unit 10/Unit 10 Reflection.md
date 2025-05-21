@@ -1,4 +1,4 @@
-# Reflection on  Unit 10 Feedback and Iteration  
+# Unit 10 Reflection: Feedback and Iteration  
 
 In this unit, I learned how to create a multi-page website using HTML, CSS, and JavaScript, design a navigation bar that works on both computers and phones, how to properly size and position images using CSS, and how to link different files together using relative paths. The most valuable lesson was about **responsive design** – making websites look good on any screen size. I now understand why media queries are so important in modern web development.
 
