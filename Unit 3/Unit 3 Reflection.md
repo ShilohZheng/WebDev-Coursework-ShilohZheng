@@ -1,4 +1,4 @@
-# Reflection on Unit 3 - Client Project
+# Unit 3 Reflection: Client Project
 
 In Unit 3, I learned how to work with clients to design a website that meets their needs. Through interviewing sample clients like Sara, Kai, and Shannon, I discovered how important it is to understand someone's personality and goals before starting to code. I now see that a good website isn't just about technical skills - it's about listening and problem-solving.
 
