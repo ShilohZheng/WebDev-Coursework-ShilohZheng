@@ -1,4 +1,4 @@
-# **Reflection on Unit 2 - Design and Design Thinking**
+# **Unit 2 Reflection: Design and Design Thinking**
 
 In Unit 2, I learned about the importance of design in web development and the key principles of design thinking. The lessons explained how design is everywhere, especially in websites, and introduced the structured process of design thinking. I now understand that good design isn't just about looks, it's about solving problems in a user-friendly way. I'll keep that in mind when creating my own web.
 
